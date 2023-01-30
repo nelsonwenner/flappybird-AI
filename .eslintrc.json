@@ -1,6 +1,6 @@
 {
   "extends": [
-    "eslint:recommended", 
+    "eslint:recommended",
     "prettier" // Prettier MUST be last. More info: https://github.com/prettier/eslint-config-prettier
   ],
   "env": {
