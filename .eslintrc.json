@@ -1,12 +1,15 @@
 {
-  "extends": "airbnb-base",
+  "extends": [
+    "eslint:recommended", 
+    "prettier" // Prettier MUST be last. More info: https://github.com/prettier/eslint-config-prettier
+  ],
   "env": {
     "browser": true,
-    "es6": true,
+    "es2021": true,
     "worker": true
   },
   "parserOptions": {
-    "ecmaVersion": 10,
-    "sourceType": "script"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   }
 }
