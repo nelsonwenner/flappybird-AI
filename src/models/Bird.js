@@ -62,7 +62,7 @@ export default class Bird {
    * @param {object} context - canvas context object
    */
   constructor(x, y, context) {
-    this.brain = new NeuralNetwork(7, 12, 1)
+    this.brain = new NeuralNetwork(7, 22, 1)
     this.x = x
     this.y = y
     this.DEGREE = Math.PI / 180

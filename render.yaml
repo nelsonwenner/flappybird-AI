@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: flappy_bird_ai_web
-    region: oregon # optional (defaults to oregon)
-    plan: starter
-    previewPlan: starter
-    buildCommand: ./render-build-web.sh
-    startCommand: ./render-run-web.sh
-    numInstances: 1
