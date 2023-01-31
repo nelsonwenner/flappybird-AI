@@ -12,7 +12,7 @@ class Main {
     this.canvas = document.getElementById("canvas")
     this.foreground = new Foreground(0, 620, this.context)
     this.pipe = new Pipe(0, 0, this.context)
-    this.population = new Population(512, this.pipe, this.canvas, this.context)
+    this.population = new Population(50, this.pipe, this.canvas, this.context)
     this.frame = 0
     this.start()
   }
@@ -39,7 +39,7 @@ class Main {
   }
 
   checkGameOver = () => {
-    this.count = 512
+    this.count = 50
     for (let i = 0; i < this.population.birds.length; i++) {
       if (this.population.birds[i].death) {
         this.count--
@@ -96,7 +96,7 @@ class Main {
     this.context.fillStyle = "#FFF"
     this.context.lineWidth = 2
     this.context.font = "15pt Calibri"
-    this.context.fillText(`Population: ${this.count}/512`, 20, 20)
+    this.context.fillText(`Population: ${this.count}/50`, 20, 20)
   }
 
   getGerations = () => {
