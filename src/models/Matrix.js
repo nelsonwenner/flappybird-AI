@@ -1,4 +1,8 @@
 /* eslint-disable no-unused-vars */
+
+/**
+ * Class representing a Matrix
+ */
 export default class Matrix {
   /**
    * Creates a 2D array of rows x columns
@@ -54,18 +58,18 @@ export default class Matrix {
   }
 
   /**
-  * Calculates the dot product of two matrices
-  * @static
-  * @param {Matrix} matrix_a - The first matrix
-  * @param {Matrix} matrix_b - The second matrix
-  * @returns {Matrix} - The resulting matrix
-  */
+   * Calculates the dot product of two matrices
+   * @static
+   * @param {Matrix} matrix_a - The first matrix
+   * @param {Matrix} matrix_b - The second matrix
+   * @returns {Matrix} - The resulting matrix
+   */
   static dot = (matrixA, matrixB) => {
-    let matrix = new Matrix(matrixA.rows, matrixB.columns);
+    let matrix = new Matrix(matrixA.rows, matrixB.columns)
 
     matrix.map((elm, i, j) => {
-      let sum = 0;
-      for (let k = 0; k < matrixA.columns; k++){
+      let sum = 0
+      for (let k = 0; k < matrixA.columns; k++) {
         let elm1 = matrixA.data[i][k]
         let elm2 = matrixB.data[k][j]
         sum += elm1 * elm2
@@ -84,9 +88,9 @@ export default class Matrix {
    */
   static addBias = (a, b) => {
     let matrix = new Matrix(a.rows, b.columns)
-      matrix.map((elm, i, j) => {
-        return a.data[i][j] + b.data[i][j]
-      })
+    matrix.map((elm, i, j) => {
+      return a.data[i][j] + b.data[i][j]
+    })
     return matrix
   }
 
