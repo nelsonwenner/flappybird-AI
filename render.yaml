@@ -4,7 +4,6 @@ services:
     region: oregon # optional (defaults to oregon)
     plan: starter
     previewPlan: starter
-    env: ruby
     buildCommand: ./render-build-web.sh
     startCommand: ./render-run-web.sh
     numInstances: 1
